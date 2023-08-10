@@ -22,6 +22,12 @@ jobs:
     steps:
     # Checks-out repository under $GITHUB_WORKSPACE, so the job can access it
     - uses: actions/checkout@v2
+    
+    # Run using Node.js 16 in the code
+    - name: Set up Node.js 16
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
 
     # Run using Python 3.8 for consistency and aiohttp
     - name: Set up Python 3.8
